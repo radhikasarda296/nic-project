@@ -15,8 +15,8 @@ Ensure you have the following installed and configured:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your/repository.git
-   cd repository-name
+   git clone https://github.com/radhikasarda296/nic-project.git
+   cd nic-project
 2. **Install PHP dendencies:**
     ```bash
     composer install
