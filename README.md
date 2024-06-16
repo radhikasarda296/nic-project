@@ -47,8 +47,31 @@ Ensure you have the following installed and configured:
 8. **Serve the application:**
     ```bash
     php artisan serve
-9. **Access the application:**
+9. **Access the application:**    
 Open your web browser and go to http://localhost:8000 to view the application.
+
+## Usage
+Open your web browser and go to http://localhost:8000. We have two options here: LogIn & Register
+1. **Register:** 
+  - Enter name,email,phone number,password & select a role from the dropdown.<br>
+  - Click on Register (This will auto login and open dashboard)
+2. **Login:** 
+  - Enter email,password & Click on Login
+3. **Upload Excel File:**
+  - If you have selected Admin/Uploader Role then in dashboard you will see Import Excel functionality.<br>
+  - You can select a file from the "Choose File" option.<br>
+  - This will display the content of the excel file in a table format with a "Import Excel" button in the end.<br>
+  - Click on the button to import the excel.<br>
+  - On successfull upload, a message will be displayed "Data imported successfully".
+4. **Profile:**
+  - This page shows account information like name,email & phone number.
+  - We can edit name and phone number and click on "Save Changes" to update Profile.
+5. **View Uploaded Files:**
+  - This page shows the list of uploaded excel files in a tabular format.
+6. **Reset Password**
+  - Enter Current password, New Password and retype new password and click on "Reset Password".
+7. **Logout**
+  - To logout from the application, click on Logout.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
