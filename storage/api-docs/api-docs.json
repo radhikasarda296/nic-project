@@ -1,0 +1,104 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your API Title",
+        "description": "Your API Description",
+        "contact": {
+            "name": "API Support",
+            "email": "contact@example.com"
+        },
+        "license": {
+            "name": "MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/schemes": {
+            "get": {
+                "tags": [
+                    "Schemes"
+                ],
+                "summary": "Get all schemes",
+                "description": "Returns a list of all schemes",
+                "operationId": "getSchemes",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "schemes": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Scheme"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "sanctum": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Scheme": {
+                "title": "Scheme",
+                "description": "Scheme model",
+                "properties": {
+                    "id": {
+                        "description": "Unique identifier for the scheme",
+                        "type": "string",
+                        "example": 1
+                    },
+                    "scheme_code": {
+                        "description": "Code of the scheme",
+                        "type": "string",
+                        "example": "SCHEME001"
+                    },
+                    "scheme_name": {
+                        "description": "Name of the scheme",
+                        "type": "string",
+                        "example": "Scheme A"
+                    },
+                    "central_state_scheme": {
+                        "description": "Type of scheme (Central or State)",
+                        "type": "string",
+                        "example": "Central"
+                    },
+                    "fin_year": {
+                        "description": "Financial year",
+                        "type": "string",
+                        "example": "2023-2024"
+                    },
+                    "state_disbursement": {
+                        "description": "State disbursement amount",
+                        "type": "string",
+                        "example": "1000000.50"
+                    },
+                    "central_disbursement": {
+                        "description": "Central disbursement amount",
+                        "type": "string",
+                        "example": "500000.75"
+                    },
+                    "total_disbursement": {
+                        "description": "Total disbursement amount",
+                        "type": "string",
+                        "example": "1500001.25"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
