@@ -1,3 +1,78 @@
+# Project Tile
+Excel File Upload
+# Project Overview
+This project aims to develop a robust web application using Laravel 10 framework, focusing on managing Excel file uploads, user authentication, role-based access control (RBAC), and providing a RESTful API for fetching Excel data. The application ensures secure handling of user credentials and data storage in a PostgreSQL database.
+## Technologies Used
+- Backend: Laravel 10
+- Frontend: Blade, HTML, CSS, Bootstrap, Vanilla JS
+- Database: PostgreSQL
+## Prerequisites
+Ensure you have the following installed and configured:
+- PHP - v8.3
+- Composer v2.7
+- PostgreSQL
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your/repository.git
+   cd repository-name
+2. **Install PHP dendencies:**
+    ```bash
+    composer install
+3. **Copy environment file:**
+    ```bash
+    cp .env.example .env
+4. **Generate application key:**
+    ```bash
+    cp .env.example .env
+5. **Configure Database:**
+   - Create a new PostgreSQL database.
+   - Update .env file with database credentials:
+    ```bash
+    DB_CONNECTION=pgsql
+    DB_HOST=127.0.0.1
+    DB_PORT=5432
+    DB_DATABASE=your_database
+    DB_USERNAME=your_username
+    DB_PASSWORD=your_password
+6. **Define Swagger Host:**
+  - Update .env file with swagger host:
+    ```bash
+    L5_SWAGGER_CONST_HOST=http://localhost:8000/api
+7. **Run Migrations & Seeders:**
+    ```bash
+    php artisan migrate
+    php artisan db:seed
+8. **Serve the application:**
+    ```bash
+    php artisan serve
+9. **Access the application:**    
+Open your web browser and go to http://localhost:8000 to view the application.
+
+## Usage
+Open your web browser and go to http://localhost:8000. We have two options here: LogIn & Register
+1. **Register:** 
+  - Enter name,email,phone number,password & select a role from the dropdown.<br>
+  - Click on Register (This will auto login and open dashboard)
+2. **Login:** 
+  - Enter email,password & Click on Login
+3. **Upload Excel File:**
+  - If you have selected Admin/Uploader Role then in dashboard you will see Import Excel functionality.<br>
+  - You can select a file from the "Choose File" option.<br>
+  - This will display the content of the excel file in a table format with a "Import Excel" button in the end.<br>
+  - Click on the button to import the excel.<br>
+  - On successfull upload, a message will be displayed "Data imported successfully".
+4. **Profile:**
+  - This page shows account information like name,email & phone number.
+  - We can edit name and phone number and click on "Save Changes" to update Profile.
+5. **View Uploaded Files:**
+  - This page shows the list of uploaded excel files in a tabular format.
+6. **Reset Password**
+  - Enter Current password, New Password and retype new password and click on "Reset Password".
+7. **Logout**
+  - To logout from the application, click on Logout.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
